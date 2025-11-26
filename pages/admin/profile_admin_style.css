@@ -1,0 +1,121 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-picture img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.post-item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 15px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal-caption {
+  margin-top: 10px;
+  color: var(--text-primary);
+}
+
+.modal-likes {
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  filter: invert(1);
+}
+
+/* tombol admin */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+}
+
+/* Tombol Take Down di Modal */
+.modal-btn-takedown {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* efek saat post di-takedown */
+/* .post-taken-down {
+  opacity: 0.4;
+  filter: grayscale(100%);
+  pointer-events: none;
+} */
