@@ -1,4 +1,3 @@
-// Data pengguna dummy untuk keperluan login
 const dummyUsers = [
   { username: "user1", password: "password123" },
   { username: "Mountain_Explorer_1", password: "securepassword" },
@@ -12,30 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorMessage = document.getElementById("errorMessage");
 
   loginForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // Mencegah form dari submit secara default
+    e.preventDefault();
 
-    const username = usernameInput.value.trim();
-    const password = passwordInput.value;
+    window.location.href = "../homepage/index.html";
 
-    // Cari pengguna yang cocok dengan username dan password
-    const user = dummyUsers.find(
-      (u) => u.username === username && u.password === password
-    );
+    //   const username = usernameInput.value.trim();
+    //   const password = passwordInput.value;
 
-    errorMessage.textContent = ""; // Hapus pesan error sebelumnya
+    //   const user = dummyUsers.find(
+    //     (u) => u.username === username && u.password === password
+    //   );
 
-    if (user) {
-      // Login Berhasil
-      console.log("Login successful:", user.username);
-      // Simulasikan pengalihan ke homepage
-      alert("Login Berhasil! Mengalihkan ke halaman utama...");
-      window.location.href = "../homepage/index.html"; // Sesuaikan path jika perlu
-    } else {
-      // Login Gagal
-      errorMessage.textContent =
-        "Sorry, your password was incorrect. Please double-check your password.";
-      console.log("Login failed for username:", username);
-      passwordInput.value = ""; // Bersihkan field password
-    }
+    //   errorMessage.textContent = "";
+
+    //   if (user) {
+    //     console.log("Login successful:", user.username);
+    //     alert("Login Berhasil! Mengalihkan ke halaman utama...");
+    //     window.location.href = "../homepage/index.html";
+    //   } else {
+    //     errorMessage.textContent =
+    //       "Sorry, your password was incorrect. Please double-check your password.";
+    //     console.log("Login failed for username:", username);
+    //     passwordInput.value = "";
+    //   }
   });
 });

@@ -4,7 +4,8 @@ const dummyData = [
   {
     profile_name: "Mountain_Explorer_1",
     img_url: "./dummy-img/dummy-img-1.jpg",
-    caption: "A breathtaking view of the sun setting over the jagged mountain peaks.",
+    caption:
+      "A breathtaking view of the sun setting over the jagged mountain peaks.",
   },
   {
     profile_name: "City_Slicker_22",
@@ -24,7 +25,8 @@ const dummyData = [
   {
     profile_name: "Arid_Traveler",
     img_url: "./dummy-img/dummy-img-1.jpg",
-    caption: "A solitary saguaro cactus standing tall against the hot desert backdrop.",
+    caption:
+      "A solitary saguaro cactus standing tall against the hot desert backdrop.",
   },
   {
     profile_name: "Morning_Brew_Pro",
@@ -34,7 +36,8 @@ const dummyData = [
   {
     profile_name: "Cosmic_Spectator",
     img_url: "./dummy-img/dummy-img-1.jpg",
-    caption: "The mesmerizing green and purple glow of the Aurora Borealis in the night sky.",
+    caption:
+      "The mesmerizing green and purple glow of the Aurora Borealis in the night sky.",
   },
   {
     profile_name: "Classic_Car_Fan",
@@ -49,7 +52,8 @@ const dummyData = [
   {
     profile_name: "Star_Sailor_001",
     img_url: "./dummy-img/dummy-img-1.jpg",
-    caption: "An astronaut floating peacefully with the vast expanse of Earth visible below.",
+    caption:
+      "An astronaut floating peacefully with the vast expanse of Earth visible below.",
   },
 ];
 
@@ -57,7 +61,7 @@ function renderPost({ profile_name, img_url, caption }) {
   return `
     <div class="post-card">
         <div class="post-profile">
-        <p>${profile_name}</p>
+        <a class="reset-link-style" href="/pages/profile/profile_page.html">${profile_name}</a>
         </div>
 
         <img src="${img_url}" alt="dummy" />
@@ -70,7 +74,7 @@ function renderPost({ profile_name, img_url, caption }) {
 
         <div class="post-caption">
             <p>
-                <span class="caption-username">${profile_name}</span>
+                <a class="caption-username reset-link-style" href="/pages/profile/profile_page.html">${profile_name}</a>
                 ${caption}
             </p>
         </div>

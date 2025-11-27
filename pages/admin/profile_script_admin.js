@@ -1,4 +1,3 @@
-
 const profileData = {
   username: "John Doe",
   profile_picture: "./pictures/dummy_pfp.jpg",
@@ -6,19 +5,19 @@ const profileData = {
     {
       img_url: "./pictures/meme1.jpg",
       caption: "Worst meme template to ever exist",
-      likes: 128
+      likes: 128,
     },
     {
       img_url: "./pictures/meme2.jpg",
       caption: "Ketika temen lu gagal install hadoop tapi lu berhasil",
-      likes: 94
+      likes: 94,
     },
     {
       img_url: "./pictures/meme3.jpg",
       caption: "Nahan ketawa kalo ada yang disablitas",
-      likes: 141
-    }
-  ]
+      likes: 141,
+    },
+  ],
 };
 
 const profileNameEl = document.querySelector(".profile-name");
@@ -32,13 +31,11 @@ const modalLikes = document.querySelector(".modal-likes");
 const modalCloseBtn = document.querySelector(".modal-close");
 
 function renderHeader() {
-  profileNameEl.textContent = profileData.username;
-
-  profilePictureEl.innerHTML = `
-    <img src="${profileData.profile_picture}" alt="pfp">
-  `;
+  // profileNameEl.textContent = profileData.username;
+  // profilePictureEl.innerHTML = `
+  //   <img src="${profileData.profile_picture}" alt="pfp">
+  // `;
 }
-
 
 function renderPosts() {
   postsContainer.innerHTML = "";
@@ -56,7 +53,6 @@ function renderPosts() {
     postsContainer.appendChild(postEl);
   });
 }
-
 
 function openModal(index) {
   const post = profileData.posts[index];
@@ -77,7 +73,6 @@ modalCloseBtn.addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
-
 
 renderHeader();
 renderPosts();
