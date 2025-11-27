@@ -2,32 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>New Post - MemeBE</title>
-    <link rel="stylesheet" href="../../global.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="../../global.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+    <script
+      src="./script.js"
+      defer
+      type="module"
+    ></script>
   </head>
   <body>
     <main class="main-container">
       <div class="header-post">
-        <a href="/pages/home/index.html" class="back-link"> &times; </a>
+        <a
+          href="/pages/home/index.html"
+          class="back-link"
+        >
+          &times;
+        </a>
         <h2>New Post</h2>
         <a href="/pages/home/index.html"
-          ><button id="postButton" disabled>Post</button></a
+          ><button
+            id="postButton"
+            disabled
+          >
+            Post
+          </button></a
         >
       </div>
 
       <form id="newPostForm">
         <div class="image-preview-area">
-          <img id="imagePreview" src="" alt="Image Preview" class="hidden" />
-          <div id="placeholderText" class="placeholder">
+          <img
+            id="imagePreview"
+            src=""
+            alt="Image Preview"
+            class="hidden"
+          />
+          <div
+            id="placeholderText"
+            class="placeholder"
+          >
             Click to upload image
           </div>
         </div>
 
         <div class="input-group">
-          <label for="imageUpload" class="custom-file-upload">
+          <label
+            for="imageUpload"
+            class="custom-file-upload"
+          >
             Pilih Gambar
           </label>
           <input
@@ -47,7 +81,10 @@
           ></textarea>
         </div>
 
-        <p id="postMessage" class="hidden"></p>
+        <p
+          id="postMessage"
+          class="hidden"
+        ></p>
       </form>
     </main>
   </body>

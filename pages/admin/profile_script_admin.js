@@ -1,3 +1,7 @@
+import { renderNav } from "../../global.js";
+
+renderNav();
+
 const profileData = {
   username: "John Doe",
   profile_picture: "./pictures/dummy_pfp.jpg",

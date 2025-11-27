@@ -1,3 +1,7 @@
+import { renderNav } from "../../global.js";
+
+renderNav();
+
 const imageUpload = document.getElementById("imageUpload");
 const imagePreview = document.getElementById("imagePreview");
 const placeholderText = document.getElementById("placeholderText");
@@ -47,11 +51,4 @@ newPostForm.addEventListener("submit", (e) => {
 
   const isImageUploaded = imageUpload.files.length > 0;
   const isCaptionFilled = captionInput.value.trim().length > 0;
-
-  if (!isImageUploaded || !isCaptionFilled) {
-    postMessage.textContent = "Please upload an image and fill the caption.";
-    postMessage.style.color = "red";
-    postMessage.classList.remove("hidden");
-    return;
-  }
 });

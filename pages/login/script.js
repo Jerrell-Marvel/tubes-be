@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    localStorage.setItem("user_data", JSON.stringify({ name: "John", role: "admin" }));
     window.location.href = "/pages/home/index.html";
 
     //   const username = usernameInput.value.trim();

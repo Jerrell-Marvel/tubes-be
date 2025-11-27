@@ -1,3 +1,6 @@
+import { renderNav } from "../../global.js";
+
+renderNav();
 
 const profileData = {
   username: "John Doe",
@@ -6,19 +9,19 @@ const profileData = {
     {
       img_url: "./pictures/meme1.jpg",
       caption: "Worst meme template to ever exist",
-      likes: 128
+      likes: 128,
     },
     {
       img_url: "./pictures/meme2.jpg",
       caption: "Ketika temen lu gagal install hadoop tapi lu berhasil",
-      likes: 94
+      likes: 94,
     },
     {
       img_url: "./pictures/meme3.jpg",
       caption: "Nahan ketawa kalo ada yang disablitas",
-      likes: 141
-    }
-  ]
+      likes: 141,
+    },
+  ],
 };
 
 const profileNameEl = document.querySelector(".profile-name");
@@ -39,7 +42,6 @@ function renderHeader() {
   `;
 }
 
-
 function renderPosts() {
   postsContainer.innerHTML = "";
 
@@ -50,13 +52,12 @@ function renderPosts() {
     postEl.innerHTML = `
       <img src="${post.img_url}" alt="post">
     `;
-    
+
     postEl.addEventListener("click", () => openModal(index));
 
     postsContainer.appendChild(postEl);
   });
 }
-
 
 function openModal(index) {
   const post = profileData.posts[index];
@@ -77,7 +78,6 @@ modalCloseBtn.addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
-
 
 renderHeader();
 renderPosts();

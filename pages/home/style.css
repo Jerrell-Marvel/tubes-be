@@ -1,4 +1,4 @@
-nav {
+/* .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,11 +10,11 @@ nav {
   z-index: 10;
 }
 
-.nav-logo {
+.navbar .nav-logo {
   font-size: 1.8rem;
 }
 
-nav button {
+.navbar button {
   background-color: transparent;
   border: 1px solid var(--border-color);
   color: var(--text-primary);
@@ -26,9 +26,9 @@ nav button {
   transition: background-color 0.2s;
 }
 
-nav button:hover {
+.navbar button:hover {
   background-color: var(--bg-tertiary);
-}
+} */
 
 .post-container {
   display: flex;
