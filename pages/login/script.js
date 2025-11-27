@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    window.location.href = "../homepage/index.html";
+    window.location.href = "/pages/home/index.html";
 
     //   const username = usernameInput.value.trim();
     //   const password = passwordInput.value;
